@@ -1,4 +1,13 @@
 # Complejidad_BigO
-Practica JAVA y GH
-Se presenta la solucion de los desafios propuestos
-sobre el tema de Datos estructurados.
+Practica Academica usando programacion en **JAVA**
+
+**Profesor** Carlos Felipe Montoya Rincon
+
+**Universidad del Valle**
+
+**Alumno;** Federico Barbetti Ruiz
+
+**Tema:** Datos Estructurados.
+
+
+Se presenta la solucion a los desafios propuestos.

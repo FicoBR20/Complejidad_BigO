@@ -1,6 +1,4 @@
-package myProject;
-
-import solucion.Ejemplo_2;
+package desafios;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,9 +11,8 @@ import java.awt.event.ActionListener;
  * GUI y soporta los metodos disenaddos
  * para explorar el tema del Big_0.
  */
-public class GUI extends JFrame {
+public class Desafio_1 extends JFrame {
 
-    private Ejemplo_2 ejemplo_2;
 
     private JButton jB_solucion_2;
 
@@ -89,7 +86,7 @@ public class GUI extends JFrame {
     /**
      * Constructor of GUI class
      */
-    public GUI(){
+    public Desafio_1(){
         initGUI();
 
         //Default JFrame configuration
@@ -108,7 +105,6 @@ public class GUI extends JFrame {
      */
     private void initGUI() {
 
-        ejemplo_2 = new Ejemplo_2();
 
         jB_solucion_2 = new JButton(" Ejecutar solucion 2");
         jB_solucion_2.setFont(new Font(Font.DIALOG,Font.BOLD,20));
@@ -190,7 +186,7 @@ public class GUI extends JFrame {
      */
     public static void main(String[] args){
         EventQueue.invokeLater(() -> {
-            GUI miProjectGUI = new GUI();
+            Desafio_1 miProjectDesafio1 = new Desafio_1();
         });
     }
 
@@ -324,20 +320,19 @@ public class GUI extends JFrame {
 //                System.out.println("======================================================");
 //
 //
-//                caso_Nums_Spaguetti(example_1);
-//                reporteConjunto +="Para la primera entrada " + getRespuesta_Nums() + "\n";
-//                caso_Nums_Spaguetti(example_2);
-//                reporteConjunto += "Para la segunda entrada " + getRespuesta_Nums() + "\n";
-//                jTextArea.setText(reporteConjunto);
-//                jTextArea.setEditable(false);
-//                jButton.setVisible(false);
-//                jButton.setEnabled(false);
-//                change();
-//
+                caso_Nums_Spaguetti(example_1);
+                reporteConjunto +="Para la primera entrada " + getRespuesta_Nums() + "\n";
+                caso_Nums_Spaguetti(example_2);
+                reporteConjunto += "Para la segunda entrada " + getRespuesta_Nums() + "\n";
+                jTextArea.setText(reporteConjunto);
+                jTextArea.setEditable(false);
+                jButton.setVisible(false);
+                jButton.setEnabled(false);
+                change();
 
-                ejemplo_2.setInfo(" sisi");
 
-                System.out.println("jButton ejecutando..." + ejemplo_2.getInfo());
+
+                System.out.println("jButton ejecutando..." );
             }
 
 

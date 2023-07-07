@@ -1,4 +1,4 @@
-package solucion;
+package desafios;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -7,7 +7,7 @@ import java.util.ListIterator;
  * Clase que implementa la solucion
  * al segundo desafio
  */
-public class Ejemplo_2 {
+public class Desafio_2 {
 
     private String info;
 
@@ -22,7 +22,7 @@ public class Ejemplo_2 {
     /**
      * Metodo Constructor
      */
-    public Ejemplo_2(){
+    public Desafio_2(){
         info = " ";
     }
 
@@ -91,7 +91,7 @@ public class Ejemplo_2 {
         System.out.println(" La LinkedList target NUEVA es: " + target);
 
 
-        Ejemplo_2 ej = new Ejemplo_2();
+        Desafio_2 ej = new Desafio_2();
     }
 
 
