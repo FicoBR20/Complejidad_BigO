@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Complegidad_BigO.iml" filepath="$PROJECT_DIR$/Complegidad_BigO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Complejidad_BigO.iml" filepath="$PROJECT_DIR$/Complejidad_BigO.iml" />
     </modules>
   </component>
 </project>
