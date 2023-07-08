@@ -9,6 +9,18 @@ import java.util.ListIterator;
  */
 public class Desafio_2 {
 
+    int[] nums_1 = {0, 1, 2, 3, 4};
+    int[] index_1 = {0, 1, 2, 2, 1};
+    //debe retornar {0,4,1,3,2}
+
+    int[] nums_2 = {1, 2, 3, 4, 0};
+    int[] index_2 = {0, 1, 2, 3, 0};
+    //debe retornar {0,1,2,3,4}
+
+    int[] nums_3 = {1};
+    int[] index_3 = {0};
+    //debe retornar {1}
+
     private String info;
 
     public String getInfo() {
@@ -19,28 +31,42 @@ public class Desafio_2 {
         this.info = info;
     }
 
+    public int[] getNums_1() {
+        return nums_1;
+    }
+
+    public int[] getIndex_1() {
+        return index_1;
+    }
+
+    public int[] getNums_2() {
+        return nums_2;
+    }
+
+    public int[] getIndex_2() {
+        return index_2;
+    }
+
+    public int[] getNums_3() {
+        return nums_3;
+    }
+
+    public int[] getIndex_3() {
+        return index_3;
+    }
+
     /**
      * Metodo Constructor
      */
     public Desafio_2(){
+
         info = " ";
+
+
+
     }
 
-
-
-    public static void main(String[] args){
-
-        int[] nums_1 = {0, 1, 2, 3, 4};
-        int[] index_1 = {0, 1, 2, 2, 1};
-        //debe retornar {0,4,1,3,2}
-
-        int[] nums_2 = {1, 2, 3, 4, 0};
-        int[] index_2 = {0, 1, 2, 3, 0};
-        //debe retornar {0,1,2,3,4}
-
-        int[] nums_3 = {1};
-        int[] index_3 = {0};
-        //debe retornar {1}
+    public LinkedList<Integer> desafio_2(int [] indices, int [] numeros){
 
 
         /**
@@ -48,39 +74,46 @@ public class Desafio_2 {
          * Corresponde al elemento de salida
          */
         LinkedList<Integer> target = new LinkedList<>();
-        ListIterator it_tardet = target.listIterator(0);//iterator en ubicacion 0
 
         /**
          * Ciclo para rellenar la LinkedList target.
-         * se USAN los datos del arreglo nums_1
+         * se USAN los datos del arreglo de numeros
          * El ojetivo es que target no este NULL
          * al iniciar el procedimiento.
          */
-        for (int i = 0; i < nums_1.length; i++) {
-            target.add(i, nums_1[i]);
+        for (int i = 0; i < numeros.length; i++) {
+            target.add(i, numeros[i]);
         }
 
-        System.out.println(" La LinkedList target INICIAL es IDENTICA a nums_1: " + target);
+        System.out.println("El arreglo nums es : " + target);
+
+        String print_Aux=" "; // para imprimir los indices
+
+        for (int dato : indices
+             ) {print_Aux+=dato + " ";
+        }
+
+        System.out.println("El arreglo index es [" + print_Aux + "]");
+
 
         int chequeo_limite = 0; // se usara para hacer restriccion del limite del arreglo.
 
-        if (nums_1.length==index_1.length){
+        if (numeros.length==indices.length){
 
-            for (int i = 0; i < index_1.length; i++) {
+            for (int i = 0; i < indices.length; i++) {
 
-                if (target.get(index_1[i])==null){
-                    target.add(index_1[i],nums_1[i]);
+                if (target.get(indices[i])==null){
+                    target.add(indices[i],numeros[i]);
                     chequeo_limite++;
                 }else {
                     LinkedList<Integer> auxiliar = new LinkedList<Integer>();
-                    auxiliar.equals(target.subList(index_1[i], index_1.length));
-                    target.add(index_1[i], nums_1[i]);
+                    auxiliar.equals(target.subList(indices[i], indices.length));
+                    target.add(indices[i], numeros[i]);
                     target.removeLast();
                     chequeo_limite++;
-                    System.out.println("auxiliar" + auxiliar + "target es " + target + " limite es " +
-                            chequeo_limite);
-                    if (chequeo_limite<index_1.length){
-                        target.addAll(index_1[i+1], auxiliar);
+                    System.out.println("Target es; " + target);
+                    if (chequeo_limite<indices.length){
+                        target.addAll(indices[i+1], auxiliar);
                     }
 
                 }
@@ -88,10 +121,26 @@ public class Desafio_2 {
             }
         }
 
-        System.out.println(" La LinkedList target NUEVA es: " + target);
+        System.out.println("La LinkedList target NUEVA es: " + target);
 
+
+        return target;
+
+
+    }
+
+
+
+    public static void main(String[] args){
 
         Desafio_2 ej = new Desafio_2();
+
+        ej.desafio_2(ej.index_1, ej.nums_1);
+        ej.desafio_2(ej.index_2, ej.nums_2);
+        ej.desafio_2(ej.index_3, ej.nums_3);
+
+
+
     }
 
 

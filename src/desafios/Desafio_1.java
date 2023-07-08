@@ -13,6 +13,8 @@ import java.awt.event.ActionListener;
  */
 public class Desafio_1 extends JFrame {
 
+    private Desafio_2 desafio_2;
+
 
     private JButton jB_solucion_2;
 
@@ -104,6 +106,8 @@ public class Desafio_1 extends JFrame {
      * create Listener and control Objects used for the GUI class
      */
     private void initGUI() {
+
+        desafio_2= new Desafio_2();
 
 
         jB_solucion_2 = new JButton(" Ejecutar solucion 2");
@@ -328,6 +332,10 @@ public class Desafio_1 extends JFrame {
                 jTextArea.setEditable(false);
                 jButton.setVisible(false);
                 jButton.setEnabled(false);
+
+                reporteConjunto +="Segundo desafio\n"
+
+                desafio_2.desafio_2(desafio_2.getIndex_1(),desafio_2.getNums_1());
                 change();
 
 
