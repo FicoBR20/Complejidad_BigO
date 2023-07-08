@@ -93,7 +93,7 @@ public class Desafio_1 extends JFrame {
 
         //Default JFrame configuration
         this.setTitle("Datos Estructurados");
-        this.setSize(600,300);
+        this.setSize(600,700);
         //this.pack();
         this.setResizable(true);
         this.setVisible(true);
@@ -157,18 +157,18 @@ public class Desafio_1 extends JFrame {
                 "en la consola\n" +
                 "Gracias.";
 
-        jTextArea = new JTextArea(info, 8,5);
-        jTextArea.setSize(new Dimension(440,190));
+        jTextArea = new JTextArea(info, 16,5);
+        jTextArea.setSize(new Dimension(440,550));
         jTextArea.setForeground(new Color(1, 5, 14));
-        jTextArea.setBounds(30,50,540,170);
+        jTextArea.setBounds(30,50,540,550);
         jTextArea.setFont(font);
 
         jScrollPane = new JScrollPane(jTextArea);
-        jScrollPane.setBounds(30,50,540,170);
+        jScrollPane.setBounds(30,50,540,550);
 
 
         jPanel = new JPanel();
-        jPanel.setSize(new Dimension(500,200));
+        jPanel.setSize(new Dimension(500,650));
         jPanel.setBackground(Color.ORANGE);
         jPanel.setForeground(Color.BLUE);
 
@@ -177,7 +177,6 @@ public class Desafio_1 extends JFrame {
         this.add(jPanel, BorderLayout.CENTER);
         this.add(jLabel, BorderLayout.SOUTH);
         this.add(jButton, BorderLayout.SOUTH);
-//        this.add(jB_solucion_2, BorderLayout.SOUTH);
 
 
 
@@ -331,7 +330,10 @@ public class Desafio_1 extends JFrame {
 
 
                 desafio_2.desafio_2(desafio_2.getIndex_1(),desafio_2.getNums_1());
-                change();
+                reporteConjunto +="\nSegundo desafio\n" + desafio_2.getInfo();
+                desafio_2.desafio_2(desafio_2.getIndex_2(),desafio_2.getNums_2());
+                reporteConjunto +="\nSegundo desafio\n" + desafio_2.getInfo();
+                desafio_2.desafio_2(desafio_2.getIndex_3(),desafio_2.getNums_3());
 
                 reporteConjunto +="\nSegundo desafio\n" + desafio_2.getInfo();
 
@@ -339,6 +341,7 @@ public class Desafio_1 extends JFrame {
                 jTextArea.setEditable(false);
                 jButton.setVisible(false);
                 jButton.setEnabled(false);
+                change();
 
                 System.out.println("jButton ejecutando..." );
             }
