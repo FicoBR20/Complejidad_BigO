@@ -68,6 +68,8 @@ public class Desafio_2 {
 
     public LinkedList<Integer> desafio_2(int [] indices, int [] numeros){
 
+        String recogedor ="";
+
 
         /**
          * LinkedList target:
@@ -87,6 +89,8 @@ public class Desafio_2 {
 
         System.out.println("El arreglo nums es : " + target);
 
+        recogedor +="El arrego nums es " + target + " \n";
+
         String print_Aux=" "; // para imprimir los indices
 
         for (int dato : indices
@@ -94,6 +98,7 @@ public class Desafio_2 {
         }
 
         System.out.println("El arreglo index es [" + print_Aux + "]");
+        recogedor +="El arrego index es [" + print_Aux + "] \n";
 
 
         int chequeo_limite = 0; // se usara para hacer restriccion del limite del arreglo.
@@ -122,6 +127,9 @@ public class Desafio_2 {
         }
 
         System.out.println("La LinkedList target NUEVA es: " + target);
+        recogedor +="El resultado targed es " + target + " \n=========================";
+
+        setInfo(recogedor);
 
 
         return target;
@@ -131,17 +139,17 @@ public class Desafio_2 {
 
 
 
-    public static void main(String[] args){
-
-        Desafio_2 ej = new Desafio_2();
-
-        ej.desafio_2(ej.index_1, ej.nums_1);
-        ej.desafio_2(ej.index_2, ej.nums_2);
-        ej.desafio_2(ej.index_3, ej.nums_3);
-
-
-
-    }
+//    public static void main(String[] args){
+//
+//        Desafio_2 ej = new Desafio_2();
+//
+//        ej.desafio_2(ej.index_1, ej.nums_1);
+//        ej.desafio_2(ej.index_2, ej.nums_2);
+//        ej.desafio_2(ej.index_3, ej.nums_3);
+//
+//
+//
+//    }
 
 
 }

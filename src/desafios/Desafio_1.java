@@ -302,7 +302,7 @@ public class Desafio_1 extends JFrame {
         /**
          * String informativo
          */
-        String reporteConjunto = "Tomando los arreglos\n" +
+        String reporteConjunto = "Primer Desafio\n" +
                 "int [] example_1 = {0,2,1,5,3,4}\n" +
                 "int [] example_2 = {5,0,1,2,3,4}\n" +
                 "Obtenemos; \n";
@@ -327,18 +327,18 @@ public class Desafio_1 extends JFrame {
                 caso_Nums_Spaguetti(example_1);
                 reporteConjunto +="Para la primera entrada " + getRespuesta_Nums() + "\n";
                 caso_Nums_Spaguetti(example_2);
-                reporteConjunto += "Para la segunda entrada " + getRespuesta_Nums() + "\n";
-                jTextArea.setText(reporteConjunto);
-                jTextArea.setEditable(false);
-                jButton.setVisible(false);
-                jButton.setEnabled(false);
+                reporteConjunto += "Para la segunda entrada " + getRespuesta_Nums() + "\n=========================";
 
-                reporteConjunto +="Segundo desafio\n"
 
                 desafio_2.desafio_2(desafio_2.getIndex_1(),desafio_2.getNums_1());
                 change();
 
+                reporteConjunto +="\nSegundo desafio\n" + desafio_2.getInfo();
 
+                jTextArea.setText(reporteConjunto);
+                jTextArea.setEditable(false);
+                jButton.setVisible(false);
+                jButton.setEnabled(false);
 
                 System.out.println("jButton ejecutando..." );
             }
