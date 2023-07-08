@@ -1,6 +1,4 @@
-package myProject;
-
-import solucion.Ejemplo_2;
+package desafios;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,9 +11,10 @@ import java.awt.event.ActionListener;
  * GUI y soporta los metodos disenaddos
  * para explorar el tema del Big_0.
  */
-public class GUI extends JFrame {
+public class Desafio_1 extends JFrame {
 
-    private Ejemplo_2 ejemplo_2;
+    private Desafio_2 desafio_2;
+
 
     private JButton jB_solucion_2;
 
@@ -89,12 +88,12 @@ public class GUI extends JFrame {
     /**
      * Constructor of GUI class
      */
-    public GUI(){
+    public Desafio_1(){
         initGUI();
 
         //Default JFrame configuration
         this.setTitle("Datos Estructurados");
-        this.setSize(600,300);
+        this.setSize(600,700);
         //this.pack();
         this.setResizable(true);
         this.setVisible(true);
@@ -108,7 +107,8 @@ public class GUI extends JFrame {
      */
     private void initGUI() {
 
-        ejemplo_2 = new Ejemplo_2();
+        desafio_2= new Desafio_2();
+
 
         jB_solucion_2 = new JButton(" Ejecutar solucion 2");
         jB_solucion_2.setFont(new Font(Font.DIALOG,Font.BOLD,20));
@@ -157,18 +157,18 @@ public class GUI extends JFrame {
                 "en la consola\n" +
                 "Gracias.";
 
-        jTextArea = new JTextArea(info, 8,5);
-        jTextArea.setSize(new Dimension(440,190));
+        jTextArea = new JTextArea(info, 16,5);
+        jTextArea.setSize(new Dimension(440,550));
         jTextArea.setForeground(new Color(1, 5, 14));
-        jTextArea.setBounds(30,50,540,170);
+        jTextArea.setBounds(30,50,540,550);
         jTextArea.setFont(font);
 
         jScrollPane = new JScrollPane(jTextArea);
-        jScrollPane.setBounds(30,50,540,170);
+        jScrollPane.setBounds(30,50,540,550);
 
 
         jPanel = new JPanel();
-        jPanel.setSize(new Dimension(500,200));
+        jPanel.setSize(new Dimension(500,650));
         jPanel.setBackground(Color.ORANGE);
         jPanel.setForeground(Color.BLUE);
 
@@ -177,7 +177,6 @@ public class GUI extends JFrame {
         this.add(jPanel, BorderLayout.CENTER);
         this.add(jLabel, BorderLayout.SOUTH);
         this.add(jButton, BorderLayout.SOUTH);
-//        this.add(jB_solucion_2, BorderLayout.SOUTH);
 
 
 
@@ -190,7 +189,7 @@ public class GUI extends JFrame {
      */
     public static void main(String[] args){
         EventQueue.invokeLater(() -> {
-            GUI miProjectGUI = new GUI();
+            Desafio_1 miProjectDesafio1 = new Desafio_1();
         });
     }
 
@@ -302,7 +301,7 @@ public class GUI extends JFrame {
         /**
          * String informativo
          */
-        String reporteConjunto = "Tomando los arreglos\n" +
+        String reporteConjunto = "Primer Desafio\n" +
                 "int [] example_1 = {0,2,1,5,3,4}\n" +
                 "int [] example_2 = {5,0,1,2,3,4}\n" +
                 "Obtenemos; \n";
@@ -324,20 +323,27 @@ public class GUI extends JFrame {
 //                System.out.println("======================================================");
 //
 //
-//                caso_Nums_Spaguetti(example_1);
-//                reporteConjunto +="Para la primera entrada " + getRespuesta_Nums() + "\n";
-//                caso_Nums_Spaguetti(example_2);
-//                reporteConjunto += "Para la segunda entrada " + getRespuesta_Nums() + "\n";
-//                jTextArea.setText(reporteConjunto);
-//                jTextArea.setEditable(false);
-//                jButton.setVisible(false);
-//                jButton.setEnabled(false);
-//                change();
-//
+                caso_Nums_Spaguetti(example_1);
+                reporteConjunto +="Para la primera entrada " + getRespuesta_Nums() + "\n";
+                caso_Nums_Spaguetti(example_2);
+                reporteConjunto += "Para la segunda entrada " + getRespuesta_Nums() + "\n=========================";
 
-                ejemplo_2.setInfo(" sisi");
 
-                System.out.println("jButton ejecutando..." + ejemplo_2.getInfo());
+                desafio_2.desafio_2(desafio_2.getIndex_1(),desafio_2.getNums_1());
+                reporteConjunto +="\nSegundo desafio\n" + desafio_2.getInfo();
+                desafio_2.desafio_2(desafio_2.getIndex_2(),desafio_2.getNums_2());
+                reporteConjunto +="\nSegundo desafio\n" + desafio_2.getInfo();
+                desafio_2.desafio_2(desafio_2.getIndex_3(),desafio_2.getNums_3());
+
+                reporteConjunto +="\nSegundo desafio\n" + desafio_2.getInfo();
+
+                jTextArea.setText(reporteConjunto);
+                jTextArea.setEditable(false);
+                jButton.setVisible(false);
+                jButton.setEnabled(false);
+                change();
+
+                System.out.println("jButton ejecutando..." );
             }
 
 

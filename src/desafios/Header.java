@@ -1,4 +1,4 @@
-package myProject;
+package desafios;
 
 import javax.swing.*;
 import java.awt.*;
