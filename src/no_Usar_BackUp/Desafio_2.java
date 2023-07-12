@@ -1,4 +1,4 @@
-package desafios;
+package no_Usar_BackUp;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -143,9 +143,9 @@ public class Desafio_2 {
 //
 //        Desafio_2 ej = new Desafio_2();
 //
-//        ej.desafio_2(ej.index_1, ej.nums_1);
-//        ej.desafio_2(ej.index_2, ej.nums_2);
-//        ej.desafio_2(ej.index_3, ej.nums_3);
+//        ej.solucion_LinkedList(ej.index_1, ej.nums_1);
+//        ej.solucion_LinkedList(ej.index_2, ej.nums_2);
+//        ej.solucion_LinkedList(ej.index_3, ej.nums_3);
 //
 //
 //
